@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "../out-tsc"
+  },
+  "files": [],
+  "include": [
+    "./helpers/console-reporter.js",
+    "../src/**/*.ts",
+    "src/**/*.spec.ts"
+  ]
+}
