@@ -3,5 +3,5 @@
 [gimmick:theme](flatly)
 
 [Home](index.md)
-[About](about.md)
+[Repo](https://github.com/sasha-arrabi/boondoggle-api)
 [Coverage](coverage.md)
