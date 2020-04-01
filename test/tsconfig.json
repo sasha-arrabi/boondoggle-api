@@ -3,9 +3,10 @@
   "compilerOptions": {
     "allowJs": true,
     "sourceMap": true,
-    "outDir": "../out-tsc"
+    "outDir": "../out-tsc",
+    "target": "ES5"
   },
-  "files": [],
+  "files": null,
   "include": [
     "./helpers/console-reporter.js",
     "../src/**/*.ts",

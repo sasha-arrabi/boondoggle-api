@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "tsc-watch --onSuccess \"node ./dist/main.js\"",
-    "test:watch": "tsc-watch --project test/tsconfig.json --onSuccess \"nyc jasmine\"",
-    "test": "nyc jasmine",
-    "coverage": "nyc jasmine & node scripts/generateCoverageButton.js",
+    "test:watch": "tsc-watch --project test/tsconfig.json --onSuccess \"nyc jasmine JASMINE_CONFIG_PATH=jasmine.json\"",
+    "test": "tsc --project test/tsconfig.json && nyc jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "coverage": "npm test & node scripts/generateCoverageButton.js",
     "wiki": "lite-server",
     "build": ""
   },
@@ -48,8 +48,14 @@
     "typescript": "^3.8.3"
   },
   "nyc": {
+    "all": true,
+    "exclude-after-remap": false,
     "include": [
-      "out-tsc/**/*.js"
+      "out-tsc/src/**/*.js"
+    ],
+    "exclude": [
+      "out-tsc/test/**/*.js",
+      "out-tsc/src/main.js"
     ],
     "report-dir": "./docs/coverage",
     "reporter": [
