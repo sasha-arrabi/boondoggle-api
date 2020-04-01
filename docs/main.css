@@ -1,0 +1,9 @@
+.dropdown-menu > li > a > .external-link {
+  height: .85em;
+  padding-left: 5px;
+  fill: #7b8a8b !important;
+}
+
+.dropdown-menu > li:hover > a > .external-link {
+  fill: #FFF !important;
+}

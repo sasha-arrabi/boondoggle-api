@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "files": ["./docs/**/*.{html,css,js,md,json}"],
+  "server": { "baseDir": "./docs" }
+}

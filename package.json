@@ -8,6 +8,7 @@
     "test:watch": "tsc-watch --project test/tsconfig.json --onSuccess \"nyc jasmine\"",
     "test": "nyc jasmine",
     "coverage": "nyc jasmine & node scripts/generateCoverageButton.js",
+    "wiki": "lite-server",
     "build": ""
   },
   "repository": {
@@ -39,15 +40,24 @@
     "eslint-plugin-jasmine": "^4.1.0",
     "jasmine": "^3.5.0",
     "jasmine-console-reporter": "^3.1.0",
+    "lite-server": "^2.5.4",
     "nyc": "^15.0.0",
-  "prettier": "^2.0.2",
+    "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
     "tsc-watch": "^4.2.3",
     "typescript": "^3.8.3"
   },
   "nyc": {
-    "include": ["out-tsc/**/*.js"],
+    "include": [
+      "out-tsc/**/*.js"
+    ],
     "report-dir": "./docs/coverage",
-    "reporter": ["text", "text-summary", "lcovonly", "html", "json-summary"]
+    "reporter": [
+      "text",
+      "text-summary",
+      "lcovonly",
+      "html",
+      "json-summary"
+    ]
   }
 }
