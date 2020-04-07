@@ -4,6 +4,7 @@ import { HttpServer } from '@nestjs/common';
 
 async function bootstrap(): Promise<HttpServer> {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
   return await app.listen(3000);
 }
 

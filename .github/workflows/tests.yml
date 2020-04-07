@@ -10,24 +10,44 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  unit-test:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && contains(toJson(github.event.commits), '[ci skip]') == false && contains(toJson(github.event.commits), '[skip ci]') == false
 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      
+
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-        
+
     - name: Install dependencies
       run: npm ci
-      
+
     - name: Run unit tests
       run: npm test
+      env:
+        CI: true
+
+  integration:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && contains(toJson(github.event.commits), '[ci skip]') == false && contains(toJson(github.event.commits), '[skip ci]') == false
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run integration tests
+      run: npm run integration-test
       env:
         CI: true

@@ -2,7 +2,8 @@
 
 # compiled output
 /dist
-/out-tsc
+/test/out-tsc
+/e2e/out-tsc
 /.nyc_output
 
 # dependencies
