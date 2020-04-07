@@ -10,6 +10,6 @@
   "include": [
     "../helpers/console-reporter.js",
     "../src/**/*.ts",
-    "src/**/*.spec.ts"
+    "src/**/*.e2e.ts"
   ]
 }

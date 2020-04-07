@@ -1,0 +1,9 @@
+{
+  "spec_dir": "e2e/out-tsc/e2e",
+  "spec_files": [
+      "src/**/*.e2e.js"
+  ],
+  "helpers": [
+    "../helpers/**/*.js"
+  ]
+}

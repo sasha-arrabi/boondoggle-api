@@ -1,9 +1,9 @@
 {
-  "spec_dir": "out-tsc/test",
+  "spec_dir": "test/out-tsc/test",
   "spec_files": [
       "src/**/*.spec.js"
   ],
   "helpers": [
-    "helpers/**/*.js"
+    "../helpers/**/*.js"
   ]
 }
