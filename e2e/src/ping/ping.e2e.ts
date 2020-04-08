@@ -16,13 +16,13 @@ describe('Ping', () => {
     await app.init();
   });
 
-  it(`/GET ping`, () => {
+  it(`/GET ping`, (done) => {
     return request(app.getHttpServer())
       .get('/ping')
       .expect(200)
       .expect({
         message: 'Hello world!',
-      });
+      }, done);
   });
 
   afterAll(async () => {
