@@ -1,0 +1,23 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile-unit-tests",
+      "detail": "Compiles the TypeScript unit tests",
+      "promptOnClose": false,
+      "isBackground": false,
+      "type": "shell",
+      "command": "./node_modules/.bin/tsc --project test/tsconfig.json"
+    },
+    {
+      "label": "compile-e2e-tests",
+      "detail": "Compiles the TypeScript integration tests",
+      "promptOnClose": false,
+      "isBackground": false,
+      "type": "shell",
+      "command": "./node_modules/.bin/tsc --project e2e/tsconfig.json"
+    }
+  ]
+}
